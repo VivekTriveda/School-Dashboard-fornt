@@ -1,0 +1,646 @@
+/* =====================================================
+   QUESTION PAPER ERP AUTHENTICATION THEME
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+    
+    overflow:hidden;
+
+
+   background: linear-gradient(135deg,#f8fbff,#edf4ff,#dbeafe);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1350px;
+
+    height:90vh;
+
+    display:flex;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.left-panel{
+
+    width:55%;
+
+    padding:45px;
+
+    color:#fff;
+
+    background:linear-gradient(160deg,#2563eb,#1e40af,#0f172a);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.erp-logo{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+.left-panel h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.left-panel h3{
+
+    font-size:20px;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+.feature i{
+
+    margin-right:15px;
+
+    color:#22c55e;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   RIGHT PANEL
+=========================== */
+
+.right-panel{
+
+    width:45%;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow-y:auto;
+
+    max-height:90vh;
+
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+.title{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#64748b;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #dbe4f0;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.30s;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+.input-box i{
+
+    width:55px;
+
+    text-align:center;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+}
+
+.input-box input,
+
+.input-box select{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+    padding-right:15px;
+
+    background:none;
+
+}
+
+.eye{
+
+    cursor:pointer;
+
+    color:#64748b !important;
+
+}
+
+/* ===========================
+   OPTIONS
+=========================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+
+}
+
+.options a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.btn-primary{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-success{
+
+    background:#16a34a;
+
+    color:#fff;
+
+}
+
+.btn-success:hover{
+
+    background:#15803d;
+
+}
+
+/* ===========================
+   TWO BUTTONS
+=========================== */
+
+.button-row{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.button-row .btn{
+
+    flex:1;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#64748b;
+
+}
+
+.footer a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.back{
+
+    margin-top:15px;
+
+    text-align:center;
+
+}
+
+.back a{
+
+    color:#64748b;
+
+    text-decoration:none;
+
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.tabs{
+
+    display:flex;
+
+    margin-bottom:30px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    border:1px solid #dbe4f0;
+
+}
+
+.tabs button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.tabs button.active{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+.container{
+
+    flex-direction:column;
+
+}
+
+.left-panel{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.right-panel{
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+.left-panel h1{
+
+    font-size:34px;
+
+}
+
+}
+
+/* ===========================
+   INDEX PAGE CARDS
+=========================== */
+
+.login-card{
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.login-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.12);
+
+}
+
+.login-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.login-icon.admin{
+
+    background:#2563eb;
+
+}
+
+.login-icon.principal{
+
+    background:#16a34a;
+
+}
+
+.login-card h3{
+
+    margin-bottom:10px;
+
+    color:#0f172a;
+
+}
+
+.login-card p{
+
+    color:#64748b;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+/* LOGIN TABS */
+
+.tabs{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+.tabs button{
+
+    flex:1;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.tabs button.active{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.tabs button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* Register Page Scroll */
+
+.right-panel::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.right-panel::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+    border-radius:20px;
+
+}
+
+.right-panel::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+.right-panel::-webkit-scrollbar-thumb:hover{
+
+    background:#2563eb;
+
+}
