@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Evaluate Answer Sheet</title>
+
+    <link rel="stylesheet" href="css/evaluate-paper.css">
+
+</head>
+
+<body>
+   
+ <div class="sidebar">
+
+<h2>QP Admin</h2>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="import-book.html">
+📚 Import Book
+</a>
+</li>
+
+<li>
+<a href="add-question.html">
+➕ Add Question
+</a>
+</li>
+
+<li>
+<a href="generate-paper.html">
+📝 Generate Paper
+</a>
+</li>
+
+<hr>
+<li>
+<a href="schools.html">
+🏫 Schools
+</a>
+</li>
+<li>
+    <a href="evaluate-paper.html" class="active-menu">
+        📝 Evaluate Answer Sheet
+    </a>
+</li>
+
+<li>
+<a href="settings.html"><i class="fa-solid fa-gear"></i>
+⚙ Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+🚪 Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+   
+
+<div class="container">
+
+    <h1>AI Answer Sheet Evaluation</h1>
+
+    <div class="card">
+
+        <label>Paper ID</label>
+
+        <input
+            type="text"
+            id="paperId"
+            placeholder="Example: QP-1783065732612">
+
+        <label>Student Name</label>
+
+        <input
+            type="text"
+            id="studentName">
+
+        <label>Roll Number</label>
+
+        <input
+            type="text"
+            id="rollNo">
+
+        <label>Upload Answer Sheet</label>
+
+        <input
+            type="file"
+            id="answerSheet" name="answerSheet"
+            accept=".pdf,.jpg,.jpeg,.png">
+
+        <button onclick="uploadAnswerSheet()">
+
+            Upload Answer Sheet
+
+        </button>
+
+    </div>
+
+    <div id="status"></div>
+
+</div>
+
+<script src="js/evaluate-paper.js"></script>
+
+</body>
+
+</html>

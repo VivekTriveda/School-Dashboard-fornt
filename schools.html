@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Schools Management</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/schools.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!-- Main -->
+
+<main class="school-main">
+
+<div class="page-header">
+
+    <div class="header-left">
+
+        <h1>
+            <i class="fa-solid fa-school"></i>
+            Schools Management
+        </h1>
+
+        <p>
+            Manage all schools from one dashboard.
+        </p>
+
+    </div>
+
+    <button id="addSchoolBtn" class="add-btn">
+        <i class="fa-solid fa-plus"></i>
+        Add School
+    </button>
+    <button id="logoutBtn" class="logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</button>
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchSchool"
+placeholder="Search School...">
+
+</div>
+
+<div id="schoolsContainer" class="schools-grid">
+
+<!-- Dynamic Cards -->
+
+</div>
+<!-- ===========================
+     Add School Modal
+============================ -->
+
+<div id="schoolModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                   <i class="fa-solid fa-school"></i>
+                   Add New School
+            </h2>
+
+            <span id="closeModal">&times;</span>
+
+        </div>
+
+        <div class="modal-body">
+
+            <input id="schoolName" placeholder="School Name">
+            <input id="principal" placeholder="Principal Name">
+            <input id="principalUsername" placeholder="Principal Username">
+            <input id="principalPassword" type="password" placeholder="Principal Password">
+            <input id="phone" placeholder="Phone Number">
+
+            <input id="email" placeholder="Email Address">
+
+            <select id="board">
+
+                <option>CBSE</option>
+                <option>ICSE</option>
+                <option>State Board</option>
+
+            </select>
+
+            <input id="city" placeholder="City">
+
+            <input id="state" placeholder="State">
+
+            <textarea
+                id="address"
+                placeholder="School Address"></textarea>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                id="cancelBtn"
+                class="cancel-btn">
+
+                Cancel
+
+            </button>
+
+            <button id="saveSchoolBtn" class="save-btn">
+                   Save School
+              </button>
+
+        </div>
+
+    </div>
+
+</div>
+</main>
+
+
+
+<script src="js/schools.js"></script>
+
+</body>
+
+</html>

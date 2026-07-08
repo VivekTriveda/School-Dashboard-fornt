@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Import Book</title>
+
+<link rel="stylesheet" href="css/import-book.css">
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>QP Admin</h2>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="import-book.html" class="active-menu">
+📚 Import Book
+</a>
+</li>
+
+<li>
+<a href="add-question.html">
+➕ Add Question
+</a>
+</li>
+
+<li>
+<a href="generate-paper.html">
+📝 Generate Paper
+</a>
+</li>
+
+<hr>
+<li>
+<a href="schools.html">
+🏫 Schools
+</a>
+</li>
+<li>
+<a href="settings.html"><i class="fa-solid fa-gear"></i>
+⚙ Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+🚪 Logout
+</a>
+</li>
+
+</ul>
+
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<div>
+
+<h1>Import Book</h1>
+
+<p>
+Upload NCERT / CBSE / ICSE Books
+</p>
+
+</div>
+
+ <div class="admin-box">
+
+    <div class="admin-avatar">
+        🏫
+    </div>
+
+    <div>
+
+        <h4 id="topSchoolName">
+            School Name
+        </h4>
+
+        <span id="topPrincipalName">
+            Principal Name
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="upload-card">
+
+<div class="upload-header">
+
+📚 Upload PDF Book
+
+</div>
+
+<div class="form-group">
+
+<label>Board</label>
+
+<select id="board">
+
+<option>CBSE</option>
+
+<option>ICSE</option>
+
+<option>State Board</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Class</label>
+
+<select id="class">
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Subject</label>
+
+<input
+type="text"
+id="subject"
+placeholder="Mathematics">
+
+</div>
+
+<div class="form-group">
+
+<label>Select PDF Book</label>
+
+<label for="pdf" class="upload-area">
+
+<div class="upload-icon">
+
+📄
+
+</div>
+
+<h3>
+
+Drag & Drop PDF
+
+</h3>
+
+<p>
+
+or click here to browse
+
+</p>
+
+<input
+type="file"
+id="pdf"
+accept=".pdf"
+hidden>
+
+</label>
+
+<p id="fileName">
+
+No file selected
+
+</p>
+
+</div>
+
+<button onclick="uploadBook()">
+
+Upload Book
+
+</button>
+
+<div id="progressContainer">
+
+<br>
+
+<progress
+id="progressBar"
+value="0"
+max="100">
+</progress>
+
+<p id="status">
+
+Uploading...
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+if (!localStorage.getItem("schoolId")) {
+
+    window.location.href = "schools.html";
+
+}
+
+</script>
+<script>
+const school = JSON.parse(localStorage.getItem("currentSchool"));
+
+if (school) {
+
+    document.getElementById("topSchoolName").innerText = school.schoolName;
+
+    document.getElementById("topPrincipalName").innerText =
+        "Principal : " + (school.principal || "Not Assigned");
+
+}
+
+</script>
+<script src="js/import-book.js"></script>
+
+</body>
+</html>

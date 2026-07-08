@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Add Question</title>
+
+<link rel="stylesheet" href="css/add-question.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>QP Admin</h2>
+
+ <ul>
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="import-book.html">
+📚 Import Book
+</a>
+</li>
+
+<li>
+<a href="add-question.html" class="active-menu">
+➕ Add Question
+</a>
+</li>
+
+<li>
+<a href="generate-paper.html">
+📝 Generate Paper
+</a>
+</li>
+
+<hr>
+<li>
+<a href="schools.html">
+🏫 Schools
+</a>
+</li>
+
+<li>
+<a href="settings.html"><i class="fa-solid fa-gear"></i>
+⚙ Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+🚪 Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+<div class="container">
+
+<div class="card">
+
+<h1>Add New Question</h1>
+
+<p class="subtitle">
+Create questions for your question bank.
+</p>
+
+<form id="questionForm">
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Board</label>
+
+<select id="board">
+
+<option>CBSE</option>
+
+<option>ICSE</option>
+
+<option>State Board</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Class</label>
+
+<select id="className">
+
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option selected>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Subject</label>
+
+<input
+type="text"
+id="subject"
+placeholder="Mathematics"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Chapter</label>
+
+<input
+type="text"
+id="chapter"
+placeholder="Algebra"
+required>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Question</label>
+
+<textarea
+id="question"
+placeholder="Enter Question"
+required></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Answer</label>
+
+<textarea
+id="answer"
+placeholder="Enter Answer"></textarea>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Question Type</label>
+
+<select id="type">
+
+<option>MCQ</option>
+<option>Short Answer</option>
+<option>Long Answer</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Difficulty</label>
+
+<select id="difficulty">
+
+<option>Easy</option>
+<option selected>Medium</option>
+<option>Hard</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Marks</label>
+
+<select id="marks">
+
+<option>1</option>
+<option selected>2</option>
+<option>3</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="button-area">
+
+<button
+type="submit"
+id="saveBtn">
+
+Save Question
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+</div>
+<div id="toast" class="toast"></div>
+<script>
+
+if (!localStorage.getItem("schoolId")) {
+
+    window.location.href = "schools.html";
+
+}
+
+</script>
+<script src="js/add-question.js"></script>
+
+</body>
+
+</html>

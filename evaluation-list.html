@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluation Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/evaluation-list.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>QP Admin</h2>
+
+        <ul>
+
+            <li><a href="dashboard.html">📊 Dashboard</a></li>
+
+            <li><a href="import-book.html">📚 Import Book</a></li>
+
+            <li><a href="manage-books.html">📚 Manage Books</a></li>
+
+            <li><a href="add-question.html">➕ Add Question</a></li>
+
+            <li><a href="generate-paper.html">📝 Generate Paper</a></li>
+
+            <li><a href="generated-papers.html">📄 Generated Papers</a></li>
+
+            <li><a href="evaluate-paper.html">📝 Evaluate Answer Sheet</a></li>
+
+            <li>
+                <a class="active-menu" href="evaluation-list.html">
+                    📊 Evaluation Reports
+                </a>
+            </li>
+
+            <hr>
+
+            <li><a href="schools.html">🏫 Schools</a></li>
+
+            <li><a href="settings.html">⚙ Settings</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Top Bar -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Evaluation Dashboard</h1>
+
+                <p>Manage AI Evaluated Answer Sheets</p>
+
+            </div>
+
+            <div class="admin-box">
+
+                <div class="admin-avatar">
+
+                    🏫
+
+                </div>
+
+                <div>
+
+                    <h4 id="topSchoolName"></h4>
+
+                    <span id="topPrincipalName"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats-container">
+
+            <div class="stat-card pending">
+
+                <div class="stat-icon">📝</div>
+
+                <div>
+
+                    <h2 id="pendingCount">0</h2>
+
+                    <p>Pending Reviews</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card approved">
+
+                <div class="stat-icon">✅</div>
+
+                <div>
+
+                    <h2 id="approvedCount">0</h2>
+
+                    <p>Approved</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card total">
+
+                <div class="stat-icon">📄</div>
+
+                <div>
+
+                    <h2 id="totalReports">0</h2>
+
+                    <p>Total Reports</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card average">
+
+                <div class="stat-icon">📊</div>
+
+                <div>
+
+                    <h2 id="averageScore">0%</h2>
+
+                    <p>Average Score</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="filter-container">
+
+    <div class="filter-group">
+
+        <label>Class</label>
+
+        <select id="classFilter">
+
+            <option value="">Select Class</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-group">
+
+        <label>Subject</label>
+
+        <select id="subjectFilter">
+
+            <option value="">Select Subject</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-group">
+
+        <button id="searchBtn">
+
+            🔍 Search Reports
+
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+
+                type="text"
+
+                id="search"
+
+                placeholder="🔍 Search Student, Subject or Paper ID">
+
+        </div>
+
+        <!-- Cards -->
+
+        <div id="emptyState" class="empty-state">
+
+    <h2>📋 Select Class & Subject</h2>
+
+    <p>Please select Class and Subject, then click <b>Search Reports</b>.</p>
+
+</div>
+         <div id="reportsSection">
+        <div id="reportContainer" class="report-container">
+
+            <!-- Cards will come here -->
+
+        </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/evaluation-list.js"></script>
+
+    <script>
+
+        const school = JSON.parse(localStorage.getItem("currentSchool"));
+
+        if (school) {
+
+            document.getElementById("topSchoolName").innerText =
+                school.schoolName;
+
+            document.getElementById("topPrincipalName").innerText =
+                "Principal : " + (school.principal || "Not Assigned");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

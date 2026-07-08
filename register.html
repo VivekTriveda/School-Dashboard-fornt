@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Question Paper ERP</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left-panel">
+
+        <div class="erp-logo">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+        </div>
+
+        <h1>Create Account</h1>
+
+        <h3>
+
+            Join Question Paper ERP
+
+        </h3>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Multi School Management
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Question Bank
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Paper Generator
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Reports & Analytics
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="right-panel">
+
+        <h2 class="title">
+
+            Create Account
+
+        </h2>
+
+        <p class="subtitle">
+
+            Register to continue
+
+        </p>
+
+        <div class="tabs">
+
+            <button
+            id="adminTab"
+            class="active">
+
+                🛡 Super Admin
+
+            </button>
+
+            <button
+            id="principalTab">
+
+                🏫 Principal
+
+            </button>
+
+        </div>
+
+        <form id="registerForm">
+
+            <!-- SCHOOL -->
+
+            <div
+            class="input-group"
+            id="schoolGroup"
+            style="display:none;">
+
+                <label>
+
+                    School
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <select id="school">
+
+                        <option>
+
+                            Select School
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Full Name
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Full Name">
+
+                </div>
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Email
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email">
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Mobile Number
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                    type="text"
+                    id="mobile"
+                    placeholder="Enter Mobile Number">
+
+                </div>
+
+            </div>
+
+            <!-- USERNAME -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Username
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user-tag"></i>
+
+                    <input
+                    type="text"
+                    id="username"
+                    placeholder="Create Username">
+
+                </div>
+
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Password
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                    id="password"
+                    type="password"
+                    placeholder="Create Password">
+
+                    <i
+                    class="fa-solid fa-eye eye"
+                    id="togglePassword"></i>
+
+                </div>
+
+            </div>
+
+            <!-- CONFIRM -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Confirm Password
+
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Confirm Password">
+
+                    <i
+                    class="fa-solid fa-eye eye"
+                    id="toggleConfirm"></i>
+
+                </div>
+
+            </div>
+
+            <button
+            class="btn btn-success">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="footer">
+
+            Already have an account?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+        <div class="back">
+
+            <a href="index.html">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/register.js"></script>
+
+</body>
+
+</html>

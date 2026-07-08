@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Book Import</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f5f5f5;
+            margin:40px;
+        }
+
+        .container{
+            max-width:700px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        select,input,button{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+        }
+
+        button{
+            background:#0066cc;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#004999;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>AI Question Import Center</h2>
+
+<form id="uploadForm">
+
+<select name="board">
+
+<option>CBSE</option>
+
+<option>ICSE</option>
+
+<option>NCERT</option>
+
+</select>
+
+<select name="class">
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<input
+type="file"
+name="pdf"
+accept=".pdf"
+required>
+
+<button>
+
+Upload Book
+
+</button>
+
+</form>
+
+</div>
+
+<script src="js/uploadBook.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Question Paper Generator</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===========================
+         Sidebar
+    ============================ -->
+
+    <div class="sidebar">
+    <h2>QP Admin</h2>
+
+ <ul>
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="import-book.html">
+📚 Import Book
+</a>
+</li>
+
+<li>
+<a href="add-question.html">
+➕ Add Question
+</a>
+</li>
+
+<li>
+<a href="generate-paper.html">
+📝 Generate Paper
+</a>
+</li>
+
+<hr>
+
+<li>
+<a href="settings.html" class="active-menu">
+⚙ Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+🚪 Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+    <!-- ===========================
+         Main Content
+    ============================ -->
+
+    <main class="main">
+
+        <!-- Top Header -->
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </h1>
+
+                <p>
+
+                    Configure your school profile, examination settings and PDF preferences.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ===========================
+             School Profile Card
+        ============================ -->
+
+        <div class="settings-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-school"></i>
+
+                <h2>School Profile</h2>
+
+            </div>
+
+            <div class="school-profile">
+
+                <!-- Logo -->
+
+                <div class="logo-section">
+
+                    <div id="logoPreview">
+
+                        <img
+                        src="https://placehold.co/180x180?text=LOGO"
+                        alt="School Logo">
+
+                    </div>
+
+                    <input
+                        type="file"
+                        id="logo"
+                        accept="image/*">
+
+                </div>
+
+                <!-- School Details -->
+
+                <div class="profile-details">
+                    <div class="form-grid">
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-school"></i>
+
+            School Name
+
+        </label>
+
+        <input
+            type="text"
+            id="schoolName"
+            placeholder="ABC Public School">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            Academic Session
+
+        </label>
+
+        <input
+            type="text"
+            id="session"
+            placeholder="2026-27">
+
+    </div>
+
+    <div class="form-group full-width">
+
+        <label>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            School Address
+
+        </label>
+
+        <textarea
+            id="address"
+            rows="3"
+            placeholder="Enter Complete School Address"></textarea>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-city"></i>
+
+            City
+
+        </label>
+
+        <input
+            type="text"
+            id="city">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-map-location-dot"></i>
+
+            State
+
+        </label>
+
+        <input
+            type="text"
+            id="state">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-location-pin"></i>
+
+            PIN Code
+
+        </label>
+
+        <input
+            type="text"
+            id="pin">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-phone"></i>
+
+            Phone Number
+
+        </label>
+
+        <input
+            type="text"
+            id="phone">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Email Address
+
+        </label>
+
+        <input
+            type="email"
+            id="email">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-globe"></i>
+
+            Website
+
+        </label>
+
+        <input
+            type="text"
+            id="website"
+            placeholder="www.school.com">
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ==========================================
+     Examination Authority
+========================================== -->
+
+<div class="settings-card">
+
+    <div class="card-title">
+
+        <i class="fa-solid fa-user-tie"></i>
+
+        <h2>Examination Authority</h2>
+
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-user"></i>
+
+                Principal Name
+
+            </label>
+
+            <input
+                type="text"
+                id="principal"
+                placeholder="Principal Name">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-user-check"></i>
+
+                Exam Controller
+
+            </label>
+
+            <input
+                type="text"
+                id="controller"
+                placeholder="Exam Controller Name">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- ==========================================
+     PDF Settings
+========================================== -->
+
+<div class="settings-card">
+
+    <div class="card-title">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        <h2>PDF Settings</h2>
+
+    </div>
+
+    <div class="switch-grid">
+
+        <label class="switch-item">
+
+            <span>Show School Logo</span>
+
+            <input
+                type="checkbox"
+                id="showLogo"
+                checked>
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Show Border</span>
+
+            <input
+                type="checkbox"
+                id="showBorder"
+                checked>
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Show Watermark</span>
+
+            <input
+                type="checkbox"
+                id="showWatermark">
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Show Page Number</span>
+
+            <input
+                type="checkbox"
+                id="showPageNumber"
+                checked>
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Show Instructions</span>
+
+            <input
+                type="checkbox"
+                id="showInstructions"
+                checked>
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Principal Signature</span>
+
+            <input
+                type="checkbox"
+                id="principalSign"
+                checked>
+
+        </label>
+
+        <label class="switch-item">
+
+            <span>Controller Signature</span>
+
+            <input
+                type="checkbox"
+                id="controllerSign"
+                checked>
+
+        </label>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- ==========================================
+     Exam Settings
+========================================== -->
+
+<div class="settings-card">
+
+    <div class="card-title">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        <h2>Exam Settings</h2>
+
+    </div>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+
+            <label>
+
+                Default Board
+
+            </label>
+
+            <select id="defaultBoard">
+
+                <option>CBSE</option>
+
+                <option>ICSE</option>
+
+                <option>State Board</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+
+                Exam Duration
+
+            </label>
+
+            <select id="defaultDuration">
+
+                <option>1 Hour</option>
+
+                <option>2 Hours</option>
+
+                <option selected>3 Hours</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+
+                Passing Marks (%)
+
+            </label>
+
+            <input
+                type="number"
+                id="passingMarks"
+                value="33">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+
+                Default Font
+
+            </label>
+
+            <select id="defaultFont">
+
+                <option>Times New Roman</option>
+
+                <option>Arial</option>
+
+                <option>Calibri</option>
+
+                <option>Cambria</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- ==========================================
+     Save Button
+========================================== -->
+
+<div class="save-section">
+
+    <button
+        id="saveSettingsBtn"
+        class="save-btn">
+
+        <i class="fa-solid fa-floppy-disk"></i>
+
+        Save Settings
+
+    </button>
+
+</div>
+
+</main>
+
+</div>
+<script>
+
+if (!localStorage.getItem("schoolId")) {
+
+    window.location.href = "schools.html";
+
+}
+
+</script>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>
